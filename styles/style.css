@@ -9,7 +9,8 @@
 
 @font-face {
   font-family: 'AmaticSC-Regular';
-  src: url('../fonts/AmaticSC/AmaticSC-Regular.ttf') format('ttf');
+  src: url('../fonts/AmaticSC/AmaticSC-Regular.ttf') format('ttf'),
+       url('../fonts/AmaticSC/AmaticSC-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -17,7 +18,8 @@
 
 @font-face {
   font-family: 'AmaticSC-Bold';
-  src: url('../fonts/AmaticSC/AmaticSC-Bold.ttf') format('ttf');
+  src: url('../fonts/AmaticSC/AmaticSC-Bold.ttf') format('ttf'),
+       url('../fonts/AmaticSC/AmaticSC-Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
