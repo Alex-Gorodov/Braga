@@ -180,7 +180,6 @@ body {
 
 .burger-nav {
   display: none;
-  max-width: 300px;
   z-index: 1000;
 }
 
@@ -212,7 +211,7 @@ body {
 }
 
 .burger-navigation-list {
-  display: none;
+  display: flex;
   position: absolute;
   right: 0;
   top: 80px;
@@ -225,11 +224,14 @@ body {
   flex-direction: column;
   list-style-type: none;
   z-index: 1000;
+  transform: translateX(300px);
+  transition: 1s;
 }
 
 .burger-opened {
   display: flex;
   transform: translateX(0);
+  transition: 1s;
 }
 
 .open-first-line {
