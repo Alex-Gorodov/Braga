@@ -2,15 +2,15 @@
 --main-color: #f9eba1;
 --special-color: #f5c143;
 --hover-color: #f9b81f;
---main-font: 'AmaticSC-Regular', sans-serif;
---special-font: 'AmaticSC-Bold', sans-serif;
+--main-font: 'AmaticSC-Regular';
+--special-font: 'AmaticSC-Bold';
 --black: #000000;
 }
 
 @font-face {
   font-family: 'AmaticSC-Regular';
   src: url('../fonts/AmaticSC/AmaticSC-Regular.ttf') format('ttf');
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -18,7 +18,7 @@
 @font-face {
   font-family: 'AmaticSC-Bold';
   src: url('../fonts/AmaticSC/AmaticSC-Bold.ttf') format('ttf');
-  font-weight: 700;
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -49,7 +49,6 @@ body {
   background-color: #e5e5e5;
   margin: 0;
   font-family: var(--main-font);
-  -webkit-font-family: var(--main-font);
   font-size: 18px;
   font-weight: 400;
   line-height: 30px;
