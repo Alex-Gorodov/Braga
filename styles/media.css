@@ -1,4 +1,9 @@
 @media(max-width: 860px) {
+
+  .nav-link-logo {
+    transform: scale(.8);
+  }
+
     .navigation-list,
     .navigation-buttons-list {
         display: none;
