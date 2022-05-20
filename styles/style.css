@@ -2,8 +2,8 @@
 --main-color: #f9eba1;
 --special-color: #f5c143;
 --hover-color: #f9b81f;
---main-font: 'AmaticSC-Regular';
---special-font: 'AmaticSC-Bold';
+--main-font: 'AmaticSC-Regular', sans-serif;
+--special-font: 'AmaticSC-Bold', sans-serif;
 --black: #000000;
 }
 
