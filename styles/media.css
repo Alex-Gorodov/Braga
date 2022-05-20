@@ -4,29 +4,29 @@
     transform: scale(.8);
   }
 
-    .navigation-list,
-    .navigation-buttons-list {
-        display: none;
-    }
+  .navigation-list,
+  .navigation-buttons-list {
+      display: none;
+  }
 
-    .burger-nav {
-      display: block;
-      z-index: 1000;
-    }
+  .burger-nav {
+    display: block;
+    z-index: 1000;
+  }
 
-    .equation-item {
-      width: 30px;
-      height: 30px;
-      background-size: 30px 30px;
-    }
+  .equation-item {
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+  }
 
-    .background-bottle {
-      background-size: 88px 300px;
-    }
+  .background-bottle {
+    background-size: 88px 300px;
+  }
 
-    .styles-item::before {
-      width: 44px;
-      height: 150px;
-      background-size: 44px 150px;
-    }
+  .styles-item::before {
+    width: 44px;
+    height: 150px;
+    background-size: 44px 150px;
+  }
 }

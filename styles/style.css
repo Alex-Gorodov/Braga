@@ -202,6 +202,7 @@ body {
 
 .burger-btn:hover .burger-btn-line {
   background-color: var(--special-color);
+  transition: .2s;
 }
 
 .burger-btn-line:not(:last-of-type) {
@@ -229,6 +230,14 @@ body {
   transform: translateX(0);
 }
 
+.open-first-line {
+  transform: translateY(8.5px);
+}
+
+.open-third-line {
+  transform: translateY(-8.5px);
+}
+
 .burger-nav .nav-link{
   margin: 0;
   padding: 0;
@@ -245,15 +254,6 @@ body {
   list-style-type: none;
   z-index: 1;
 }
-
-/* .burger-navigation-buttons-list .navigation-item:nth-child(1) .burger-nav-btn {
-  background-color: var(--main-color);
-}
-
-.burger-navigation-buttons-list .navigation-item:nth-child(1) .burger-nav-btn:hover {
-  background-color: var(--hover-color);
-  border-color: var(--hover-color);
-} */
 
 /***************************************************************
 
@@ -533,6 +533,8 @@ body {
   animation: firstStep 1.2s infinite;
   animation-direction: reverse;
   animation-timing-function: cubic-bezier(0,0,1,1);
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
   -webkit-animation: firstStep 1.2s infinite;
   -webkit-animation-direction: reverse;
   -webkit-animation-timing-function: cubic-bezier(0,0,1,1);
@@ -544,6 +546,8 @@ body {
   animation: secondStep 1.2s infinite;
   animation-direction: reverse;
   animation-timing-function: cubic-bezier(0,0,1,1);
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
   -webkit-animation: secondStep 1.2s infinite;
   -webkit-animation-direction: reverse;
   -webkit-animation-timing-function: cubic-bezier(0,0,1,1);
