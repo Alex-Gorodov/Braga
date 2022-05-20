@@ -635,6 +635,7 @@ body {
 .developer-name {
   position: absolute;
   display: inline-block;
+  margin-top: -20px;
   left: 50%;
   font-weight: 700;
   transform: translateX(-50%);
