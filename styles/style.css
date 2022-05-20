@@ -23,16 +23,6 @@
   font-display: swap;
 }
 
-/* @keyframes bottleShakingTop {
-  from {transform: rotate(-43deg);}
-  to {transform: rotate(-47deg)}
-}
-
-@keyframes bottleShakingBottom {
-  from {transform: rotate(-47deg);}
-  to {transform: rotate(-43deg)}
-} */
-
 /***************************************************************
 
                   COMMON STYLES
@@ -65,38 +55,72 @@ body {
 }
 
 .button {
+  position: relative;
   display: inline-block;
   padding: 8px 12px;
   vertical-align: middle;
   border: 2px solid var(--special-color);
-  background-color: var(--main-color);
+  background: var(--main-color);
   font-family: var(--special-font);
   font-size: 20px;
   white-space: nowrap;
   cursor: pointer;
+  overflow: hidden;
 }
+
+.button span {
+  position: relative;
+  z-index: 10;
+}
+
+.button:not(.filled-btn) {
+  background-color: var(--main-color);
+}
+
+.button:not(.filled-btn)::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  transform: translateX(-100%);
+  transition: .3s;
+}
+
+.button:not(.filled-btn):hover::after {
+  background-color: var(--special-color);
+  transform: translateX(0);
+}
+
+.filled-btn {
+  background-color: var(--special-color);
+}
+
+.filled-btn::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  transform: translateX(100%);
+  transition: .3s;
+}
+
+.filled-btn:hover::after {
+  background-color: var(--main-color);
+  transform: translateX(0);
+}
+
 
 /***************************************************************
 
                   HEADER STYLES
 
 ***************************************************************/
-
-.main-btn-item:nth-child(2n) .button,
-.navigation-item:nth-child(2n) .button {
-  background-color: var(--special-color);
-}
-
-.main-btn-item:nth-child(2n) .button:hover,
-.navigation-item:nth-child(2n) .button:hover {
-  background-color: var(--hover-color);
-  border-color: var(--hover-color);
-}
-
-.button:hover {
-  background-color: var(--hover-color);
-  border-color: var(--hover-color);
-}
 
 .page-header {
   position: relative;
@@ -154,7 +178,7 @@ body {
 .burger-nav {
   display: none;
   max-width: 300px;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .burger-btn {
@@ -190,17 +214,18 @@ body {
   top: 80px;
   text-align: right;
   background-color: var(--main-color);
-  padding: 20px;
+  padding: 40px;
   margin: 0;
   height: 50vh;
   justify-content: space-between;
   flex-direction: column;
   list-style-type: none;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .burger-opened {
   display: flex;
+  transform: translateX(0);
 }
 
 .burger-nav .nav-link{
@@ -220,14 +245,14 @@ body {
   z-index: 1;
 }
 
-.burger-navigation-buttons-list .navigation-item:nth-child(1) .burger-nav-btn {
+/* .burger-navigation-buttons-list .navigation-item:nth-child(1) .burger-nav-btn {
   background-color: var(--main-color);
 }
 
 .burger-navigation-buttons-list .navigation-item:nth-child(1) .burger-nav-btn:hover {
   background-color: var(--hover-color);
   border-color: var(--hover-color);
-}
+} */
 
 /***************************************************************
 
@@ -498,33 +523,22 @@ body {
   to {color: #e81717; transform: translateY(0) translateX(-48px);}
 }
 
-@keyframes eye {
-  from {background: linear-gradient(to bottom, #6860cd 40%, #000000 44%, transparent 42%); background-position: 0 0}
-  10% {background: linear-gradient(#6860cd 100%, transparent 100%); background-position: 0 100%}
-  15% {background: linear-gradient(to bottom, #6860cd 40%, #000000 44%, transparent 42%); background-position: 0 0}
-  35% {background: linear-gradient(#6860cd 100%, transparent 100%); transition-delay: .5s; background-position: 0 100%}
-  40% {background: linear-gradient(to bottom, #6860cd 40%, #000000 44%, transparent 42%); background-position: 0 0}
-  to {background: linear-gradient(#6860cd 100%, transparent 100%); background-position: 0 100%}
-}
-
-
 .page-footer {
+  display: flex;
+  flex-direction: column;
   position: relative;
   height: 200px;
-  /* width: 100%; */
   background-color: var(--main-color);
   border-top: 2px solid var(--special-color);
   box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  /* padding: 140px; */
 }
 
-.logo {
+.logo-steps {
   position: absolute;
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  /* display: inline-block; */
   text-align: center;
   font-size: 24px;
   font-weight: 700;
@@ -548,41 +562,41 @@ body {
   -webkit-animation-timing-function: cubic-bezier(0,0,1,1);
 }
 
-.logo-two {
+@keyframes eye {
+  from {background: linear-gradient(to bottom, #6860cd 40%, #000000 44%, transparent 42%); background-position: 0 0;}
+  5% {background: linear-gradient(#6860cd 100%, transparent 100%); background-position: 0 100%;}
+  10% {background: linear-gradient(to bottom, #6860cd 30%, #000000 34%, transparent 32%); background-position: 0 0;}
+  16% {background: linear-gradient(#6860cd 100%, transparent 100%); background-position: 0 100%;}
+  20% {background: linear-gradient(to bottom, #6860cd 60%, #000000 64%, transparent 62%); background-position: 0 0;}
+  35% {background: linear-gradient(#6860cd 100%, transparent 100%); transition-delay: .5s; background-position: 0 100%;}
+  40% {background: linear-gradient(to bottom, #6860cd 50%, #000000 54%, transparent 52%); background-position: 0 0;}
+  80% {background: linear-gradient(#6860cd 100%, transparent 100%); transition-delay: .5s; background-position: 0 100%;}
+  90% {background: linear-gradient(to bottom, #6860cd 10%, #000000 14%, transparent 12%); background-position: 0 0;}
+  to {background: linear-gradient(#6860cd 100%, transparent 100%); background-position: 0 100%;}
+}
+
+.logo {
+  display: block;
+  position: relative;
+  margin: auto;
+}
+
+.logo-item svg {
   position: absolute;
-  bottom: 40px;
-  right: 10%;
-  /* transform: scale(.6); */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* body */
-.logo-two-item:nth-of-type(1) {
+.logo-item:nth-of-type(1) {
   display: block;
   width: 100px;
   height: 146px;
-  background-image: url('../images/logo-star.svg');
-  background-size: 100px 146px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* mouth */
-.logo-two-item:nth-of-type(2) {
-  position: absolute;
-  bottom: 46px;
-  left: 36px;
-  display: block;
-  width: 22px;
-  height: 26px;
-
-  /* background-image: url('../images/logo-mouth.svg'); */
-  background-size: 22px 26px;
-  background-position: center;
-  background-repeat: no-repeat;
+  transform: scale(1.5) translateY(30px);
 }
 
 /* eye */
-.logo-two-item:nth-of-type(3) {
+.logo-item:nth-of-type(2) {
   position: absolute;
   top: 38px;
   left: 37px;
@@ -594,10 +608,10 @@ body {
 }
 
 /* pupil */
-.logo-two-item:nth-of-type(4) {
+.logo-item:nth-of-type(3) {
   position: absolute;
   top: 48px;
-  left: 45px;
+  left: 46px;
   display: block;
   width: 15px;
   height: 15px;
@@ -606,7 +620,7 @@ body {
 }
 
 /* eyepil */
-.logo-two-item:nth-of-type(5) {
+.logo-item:nth-of-type(4) {
   position: absolute;
   top: 38px;
   left: 37px;
@@ -615,17 +629,12 @@ body {
   height: 33px;
   border-radius: 50%;
   border: 1px solid #000000;
-  animation: eye 4s infinite;
-  animation-timing-function: cubic-bezier(1, 0.2, 0.82, 0.075); 
-}
-
-.developer-name {
-  position: absolute;
-  display: inline-block;
-  left: 50%;
-  bottom: -1vw;
-  font-weight: 700;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  
+  background-color: #6860CD;
+  animation: eye 2.5s infinite linear;
+  animation-fill-mode:forwards;
+  animation-direction: alternate-reverse;
+  -webkit-animation: eye 2.5s infinite linear;
+  transition: cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-animation-fill-mode:forwards;
+  -webkit-animation-direction: alternate-reverse;
 }
