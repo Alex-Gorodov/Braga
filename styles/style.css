@@ -300,8 +300,6 @@ body {
   background-repeat: no-repeat;
   background-size: 138px 470px;
   transform: rotate(-45deg);
-  animation: bottleShakingTop .5s infinite ease-in-out;
-  animation-direction: alternate-reverse;
   background-attachment: fixed;
 }
 
@@ -309,43 +307,31 @@ body {
   background-image: url('../images/ipa.png');
   top: -270px;
   left: 0%;
-  animation-delay: -.1s;
 }
 .background-bottle:nth-of-type(2) {
   top: -270px;
   left: 45%;
   background-image: url('../images/neipa.png');
-  animation-delay: -.2s;
 }
 .background-bottle:nth-of-type(3) {
   top: -270px;
   left: 90%;
   background-image: url('../images/porter.png');
-  animation-delay: -.3s;
 }
 .background-bottle:nth-of-type(4) {
   top: 110px;
   left: 0%;
   background-image: url('../images/lager.png');
-  animation: bottleShakingBottom .5s infinite ease-in-out;
-  animation-direction: alternate-reverse;
-  animation-delay: -.4s;
 }
 .background-bottle:nth-of-type(5) {
   top: 110px;
   left: 45%;
   background-image: url('../images/stout.png');
-  animation: bottleShakingBottom .5s infinite ease-in-out;
-  animation-direction: alternate-reverse;
-  animation-delay: -.5s;
 }
 .background-bottle:nth-of-type(6) {
   top: 110px;
   left: 90%;
   background-image: url('../images/wheat.png');
-  animation: bottleShakingBottom .5s infinite ease-in-out;
-  animation-direction: alternate-reverse;
-  animation-delay: -.6s;
 }
 
 .entry-section .subtitle {
@@ -500,8 +486,6 @@ body {
   font-size: 3vw;
 }
 
-
-
 /***************************************************************
 
                   PAGE-FOOTER STYLES
@@ -551,6 +535,8 @@ body {
   animation: firstStep 1.2s infinite;
   animation-direction: reverse;
   animation-timing-function: cubic-bezier(0,0,1,1);
+  -webkit-animation: firstStep 1.2s infinite;
+  -webkit-animation-direction: reverse;
   -webkit-animation-timing-function: cubic-bezier(0,0,1,1);
 }
 
@@ -560,6 +546,8 @@ body {
   animation: secondStep 1.2s infinite;
   animation-direction: reverse;
   animation-timing-function: cubic-bezier(0,0,1,1);
+  -webkit-animation: secondStep 1.2s infinite;
+  -webkit-animation-direction: reverse;
   -webkit-animation-timing-function: cubic-bezier(0,0,1,1);
 }
 
