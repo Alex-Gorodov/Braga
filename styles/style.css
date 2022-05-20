@@ -63,6 +63,7 @@ body {
   background: var(--main-color);
   font-family: var(--special-font);
   font-size: 20px;
+  color: var(--black);
   white-space: nowrap;
   cursor: pointer;
   overflow: hidden;
