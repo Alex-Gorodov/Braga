@@ -29,4 +29,26 @@
     height: 150px;
     background-size: 44px 150px;
   }
+}@media(max-width: 540px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+  }
+
+  .about-section .wrapper {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    background-color: var(--main-color);
+  }
+
+  .advantages-list {
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+  }
+
+  .about-section .button {
+    grid-row: 4 / 5;
+    grid-column: 1 / -1;
+  }
+
 }
