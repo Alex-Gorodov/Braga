@@ -631,3 +631,13 @@ body {
   -webkit-animation-fill-mode:forwards;
   -webkit-animation-direction: alternate-reverse;
 }
+
+.developer-name {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  font-weight: 700;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  color: #ffffff;
+}
