@@ -592,9 +592,9 @@ body {
 }
 
 @keyframes eye {
-  from {transform: translateY(-100%);}
+  from {transform: translateY(-80%);}
   25% {transform: translateY(-60%);}
-  90% {transform: translateY(-20%);}
+  70% {transform: translateY(-10%);}
   to {transform: translateY(0%);}
 }
 
@@ -635,7 +635,7 @@ body {
 /* pupil */
 .logo-item:nth-of-type(3) {
   position: absolute;
-  top: 48px;
+  top: 47px;
   left: 46px;
   display: block;
   width: 15px;
@@ -657,12 +657,21 @@ body {
   background-color: #6860CD;
   animation: eye 2.5s infinite linear;
   animation-fill-mode:forwards;
-  animation-direction: alternate-reverse;
+  animation-direction: alternate;
   -webkit-animation: eye 2.5s infinite linear;
   transition: cubic-bezier(0.86, 0, 0.07, 1);
   -webkit-animation-fill-mode:forwards;
-  -webkit-animation-direction: alternate-reverse;
+  -webkit-animation-direction: alternate;
   z-index: 1;
+}
+
+.logo:hover .logo-item:nth-of-type(2)::after {
+  animation-play-state: paused;
+  opacity: 0;
+}
+
+.logo:hover .logo-item:nth-of-type(3) {
+  transform: scale(1.7);
 }
 
 .developer-name {
