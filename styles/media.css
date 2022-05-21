@@ -30,6 +30,14 @@
     background-size: 44px 150px;
   }
 }@media(max-width: 540px) {
+  .page-header {
+    padding: 10px;
+  }
+
+  .burger-btn {
+    right: 20px;
+  }
+
   .about-section {
     grid-template-columns: 1fr;
     grid-template-rows: min-content;
