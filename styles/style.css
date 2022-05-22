@@ -54,6 +54,21 @@ body {
   line-height: 30px;
 }
 
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .button {
   position: relative;
   display: inline-block;
@@ -67,6 +82,7 @@ body {
   white-space: nowrap;
   cursor: pointer;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .button span {
@@ -228,13 +244,13 @@ body {
   list-style-type: none;
   z-index: 1000;
   transform: translateX(300px);
-  transition: .6s;
+  transition: .2s;
 }
 
 .burger-opened {
   display: flex;
   transform: translateX(0);
-  transition: .6s;
+  transition: .2s;
 }
 
 .open-first-line {
@@ -668,7 +684,7 @@ body {
   content: '';
   position: absolute;
   top: -1px;
-  left: 0;
+  left: -1px;
   display: block;
   width: 33px;
   height: 33px;
@@ -685,7 +701,7 @@ body {
 }
 
 .logo:hover .logo-item:nth-of-type(2)::before {
-  transform: scale(1.7);
+  transform: scale(1.7) translate(-30%, -30%);
 }
 
 .logo:hover .logo-item:nth-of-type(2)::after {
