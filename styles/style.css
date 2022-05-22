@@ -282,10 +282,10 @@ body {
   position: relative;
   min-height: 80vh;
   padding-top: 120px;
-  background: linear-gradient(281.86deg, rgba(28, 28, 25, 0.35) 0%, rgba(246, 194, 67, 0.35) 100%); 
-  -webkit-background: linear-gradient(281.86deg, rgba(28, 28, 25, 0.35) 0%, rgba(246, 194, 67, 0.35) 100%); 
-  overflow: hidden;
+  background: linear-gradient(281.86deg, rgba(165, 138, 75, 0.35) 0%, rgba(77, 58, 12, 0.35) 98.44%);; 
+  -webkit-background: linear-gradient(281.86deg, rgba(165, 138, 75, 0.35) 0%, rgba(77, 58, 12, 0.35) 98.44%);; 
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
 
 .background-wrapper {
@@ -295,6 +295,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   z-index: -1;
+  filter: blur(3px);
 }
 
 .background-bottle {
@@ -305,38 +306,43 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 138px 470px;
-  transform: rotate(-45deg);
+  transform: scale(.8) translateX(-50%) rotate(-45deg);
 }
 
 .background-bottle:nth-of-type(1) {
   background-image: url('../images/ipa.png');
-  top: -270px;
-  left: 0%;
+  top: -300px;
+  left: 25%;
 }
 .background-bottle:nth-of-type(2) {
-  top: -270px;
-  left: 45%;
+  top: -300px;
+  left: 50%;
   background-image: url('../images/neipa.png');
+  
 }
 .background-bottle:nth-of-type(3) {
-  top: -270px;
-  left: 90%;
+  top: -300px;
+  left: 75%;
   background-image: url('../images/porter.png');
+  
 }
 .background-bottle:nth-of-type(4) {
-  top: 110px;
-  left: 0%;
+  top: 60px;
+  left: 25%;
   background-image: url('../images/lager.png');
+  transform: scale(.8) translateX(-50%) rotate(45deg);
 }
 .background-bottle:nth-of-type(5) {
-  top: 110px;
-  left: 45%;
+  top: 60px;
+  left: 50%;
   background-image: url('../images/stout.png');
+  transform: scale(.8) translateX(-50%) rotate(45deg);
 }
 .background-bottle:nth-of-type(6) {
-  top: 110px;
-  left: 90%;
+  top: 60px;
+  left: 75%;
   background-image: url('../images/wheat.png');
+  transform: scale(.8) translateX(-50%) rotate(45deg);
 }
 
 .entry-section .subtitle {
@@ -441,6 +447,7 @@ body {
 .equation-item:nth-of-type(9) {
   background-image: url('../images/glass.svg');
 }
+
 .section-title {
   font-size: 4vw;
 }
@@ -509,13 +516,14 @@ body {
 
 .about-section .section-title {
   font-size: 44px;
-  line-height: 44px;
+  line-height: 52px;
   text-align: left;
 }
 
 .section-text {
   text-align: left;
   font-size: 34px;
+  line-height: 46px;
 }
 
 .advantages-list {
@@ -550,6 +558,8 @@ body {
   width: 24px;
   height: 24px;
   margin-right: 12px;
+  margin-left: -34px;
+  vertical-align: middle;
   content: '';
   background-position: center;
   grid-column: 1 / 2;
