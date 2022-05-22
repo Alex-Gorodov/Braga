@@ -228,13 +228,13 @@ body {
   list-style-type: none;
   z-index: 1000;
   transform: translateX(300px);
-  transition: 1s;
+  transition: .6s;
 }
 
 .burger-opened {
   display: flex;
   transform: translateX(0);
-  transition: 1s;
+  transition: .6s;
 }
 
 .open-first-line {
@@ -450,12 +450,15 @@ body {
 
 .section-title {
   font-size: 4vw;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .styles-list {
   display: grid;
   padding: 0;
   margin: 0;
+  margin-bottom: 20px;
   grid-template-columns: repeat(3, 1fr);
   list-style-type: none;
   justify-content: center;
@@ -544,6 +547,7 @@ body {
 }
 
 .advantage-name {
+  font-weight: 700;
   grid-row: 1 / 2;
   grid-column: 2 / -1;
 }
