@@ -113,6 +113,7 @@ body {
 
 .filled-btn {
   background-color: var(--special-color);
+  padding: 6px 12px;
 }
 
 .filled-btn::after {
@@ -233,7 +234,7 @@ body {
   display: flex;
   position: absolute;
   right: 0;
-  top: 80px;
+  top: 60px;
   text-align: right;
   background-color: var(--main-color);
   padding: 40px;
@@ -636,7 +637,6 @@ body {
   position: relative;
   margin-top: 0;
   margin-left: auto;
-  /* transform: scale(.6); */
 }
 
 .logo-item svg {
